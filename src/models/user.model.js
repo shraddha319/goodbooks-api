@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 const { SALT_WORK_FACTOR } = require('../config');
 
-const userSchema = mongoose.Schema({
+const userSchema = Schema({
   email: {
     type: String,
     required: true,
@@ -37,6 +37,5 @@ userSchema.pre('save', async function (next) {
  * DO NOT MOVE
  * .model() must be called after adding everything to schema, including hooks
  */
-const User = mongoose.model('User', userSchema);
 
-module.exports = { User, userSchema };
+module.exports = model('User', userSchema);
