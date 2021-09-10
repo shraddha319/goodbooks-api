@@ -2,16 +2,16 @@
   "name": "goodbooks-api",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "jest --maxWorkers=1",
     "test:coverage": "jest --maxWorkers=1 --coverage",
     "test:watch": "jest --watch --maxWorkers=1",
-    "dev": "nodemon --delay 500ms --watch app.js",
-    "start": "node app.js",
+    "dev": "nodemon --delay 500ms --watch src/app.js",
+    "start": "node src/app.js",
     "clean": "kill -9 $(lsof -t -i:3000)",
-    "lint": "./node_modules/.bin/eslint app.js",
-    "lint:fix": "./node_modules/.bin/eslint app.js"
+    "lint": "./node_modules/.bin/eslint src/app.js",
+    "lint:fix": "./node_modules/.bin/eslint src/app.js"
   },
   "repository": {
     "type": "git",
