@@ -1,6 +1,6 @@
 const Joi = require('joi');
 const { ApplicationError, ErrorTypes, pick } = require('../lib');
-const { User } = require('../models/user.model');
+const User = require('../models/user.model');
 
 const { VALIDATION_ERROR } = ErrorTypes;
 

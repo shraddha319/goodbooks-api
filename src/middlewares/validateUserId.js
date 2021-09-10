@@ -1,4 +1,4 @@
-const { User } = require('../models/user.model');
+const User = require('../models/user.model');
 const { ApplicationError, ErrorTypes } = require('../lib');
 
 const { RESOURCE_NOT_FOUND } = ErrorTypes;

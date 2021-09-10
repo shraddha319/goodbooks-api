@@ -5,7 +5,7 @@ const {
   ApplicationError,
   generateToken,
 } = require('../lib');
-const { User } = require('../models/user.model');
+const User = require('../models/user.model');
 
 const { AUTHENTICATION_ERROR, RESOURCE_NOT_FOUND } = ErrorTypes;
 
