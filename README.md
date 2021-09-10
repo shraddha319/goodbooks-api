@@ -86,16 +86,39 @@ npm run lint:fix
 
 ## API Documentation
 
-#### Auth routes:
+### Product routes:
+
+`GET /products` - get products\
+`POST /products` - add products\
+`GET /products/:productId` - get product by ID
+
+### Auth routes:
 
 `POST /auth/login` - login user
 
-#### User routes:
+### User routes:
 
-`POST /users` - create user\
+`POST /users` - create user
+
+(Below routes require user authentication)
+
 `GET /users/:userId` - get user\
 `POST /users/:userId` - update user\
 `DELETE /users/:userId` - delete user
+
+### Cart routes:
+
+`GET /users/:userId:/cart` - get cart by user ID\
+`POST /users/:userId/cart` - create cart\
+`POST /users/:userId/cart/:cartId` - update cart by cart ID\
+`DELETE /users/:userId/cart/:cartId` - delete cart by cart ID
+
+### Wishlist routes:
+
+`GET /users/:userId:/wishlist` - get wishlist by user ID\
+`POST /users/:userId/wishlist` - create wishlist\
+`POST /users/:userId/wishlist/:wishlistId` - update cart by ID\
+`DELETE /users/:userId/wishlist/:wishlistId` - delete wishlist by ID
 
 ## License
 
