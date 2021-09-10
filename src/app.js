@@ -6,7 +6,8 @@ const cors = require('cors');
 const { PORT, NODE_ENV } = require('./config');
 const { connectDB } = require('./lib');
 const { errorHandler, notFoundHandler } = require('./middlewares');
-const userRouter = require('./routes/users.route');
+const productsRouter = require('./routes/products.route');
+const usersRouter = require('./routes/users.route');
 const authRouter = require('./routes/auth.route');
 
 if (NODE_ENV !== 'test') connectDB();
@@ -19,8 +20,9 @@ app.get('/', (req, res) => {
 
 app.use(json());
 app.use(cors());
+app.use('/products', productsRouter);
 app.use('/auth', authRouter);
-app.use('/users', userRouter);
+app.use('/users', usersRouter);
 
 /**
  * 404 Error handler
