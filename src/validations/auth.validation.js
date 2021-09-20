@@ -1,5 +1,4 @@
 const Joi = require('joi');
-const { password } = require('./custom.validation');
 
 // TODO - test input schema
 
@@ -10,8 +9,8 @@ const login = {
     })
     .unknown(true),
   body: Joi.object().keys({
-    email: Joi.string().email(),
-    password: Joi.string().custom(password),
+    email: Joi.string(),
+    password: Joi.string(),
   }),
 };
 
