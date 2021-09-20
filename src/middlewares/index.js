@@ -5,6 +5,7 @@ const validate = require('./validate');
 const validateUserId = require('./validateUserId');
 const validateCartId = require('./validateCartId');
 const validateWishlistId = require('./validateWishlistId');
+const validateProductId = require('./validateProductId');
 
 module.exports = {
   errorHandler,
@@ -14,4 +15,5 @@ module.exports = {
   validateUserId,
   validateCartId,
   validateWishlistId,
+  validateProductId,
 };
